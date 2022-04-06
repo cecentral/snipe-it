@@ -105,6 +105,6 @@ $config = [
 // (by default, the PUBLIC_FILESYSTEM DISK is 'local_public', in the public/uploads directory)
 $config['disks']['public'] = $config['disks'][env('PUBLIC_FILESYSTEM_DISK','local_public')];
 
-die( print_r( $config, true ) );
+error_logs( print_r( $config, true ) );
 
 return $config;
