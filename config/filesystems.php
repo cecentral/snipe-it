@@ -26,7 +26,7 @@ $config = [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 's3_public'),
+    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +104,5 @@ $config = [
 // copy the selected PUBLIC_FILESYSTEM_DISK's configuration to the 'public' key for easy use
 // (by default, the PUBLIC_FILESYSTEM DISK is 'local_public', in the public/uploads directory)
 $config['disks']['public'] = $config['disks'][env('PUBLIC_FILESYSTEM_DISK','local_public')];
-
-error_logs( print_r( $config, true ) );
 
 return $config;
